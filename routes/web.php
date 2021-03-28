@@ -30,6 +30,7 @@ Route::middleware(['auth:sanctum', 'verified'])->post('/', [TicketController::cl
 
 
 Route::middleware(['admin', 'verified'])->get('/admin', [AdminController::class, 'view'])->name('adminView');
+
 Route::middleware(['admin', 'verified'])->get('/admin/user', [AdminController::class, 'users'])->name('adminUser');
 Route::middleware(['admin', 'verified'])->get('/admin/user/edit/{id}', [AdminController::class, 'editUser'])->name('editUser');
 Route::middleware(['admin', 'verified'])->post('/admin/user', [AdminController::class, 'delUser'])->name('delUser');
@@ -37,4 +38,5 @@ Route::middleware(['admin', 'verified'])->get('/admin/user/create', [AdminContro
 Route::middleware(['admin', 'verified'])->post('/admin/user/create', [AdminController::class, 'registerUser'])->name('registerUser');
 
 
-Route::middleware(['admin', 'verified'])->get('/admin/tickets', [AdminController::class, 'view'])->name('adminTickets');
+Route::middleware(['admin', 'verified'])->get('/admin/tickets', [AdminController::class, 'tickets'])->name('adminTickets');
+Route::middleware(['admin', 'verified'])->post('/admin/tickets', [AdminController::class, 'delTicket'])->name('delTicket');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
+use App\Models\FriendlyTicket;
 use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -41,7 +42,7 @@ class AdminController extends Controller
     {
         $users = User::where(['is_admin' => false])
             ->get();
-        //dd($users);
+
         return view('admin.users', [
             'users' => $users,
         ]);
@@ -59,7 +60,7 @@ class AdminController extends Controller
         return view('auth.register');
     }
 
-    public function registerUser(Request $request)
+    public function registerUser(Request $request): RedirectResponse
     {
         if ($id = $request->post('id', null)) {
             $user = User::find($id);
@@ -83,4 +84,21 @@ class AdminController extends Controller
         return redirect()->route('adminUser');
     }
 
+    public function tickets()
+    {
+        $tickets = FriendlyTicket::all();
+
+        return view('admin.tickets', [
+            'tickets' => $tickets,
+        ]);
+    }
+
+    public function delTicket(Request $request): RedirectResponse
+    {
+        $id = $request->post('id');
+
+        FriendlyTicket::destroy($id);
+
+        return redirect()->route('adminTickets');
+    }
 }
