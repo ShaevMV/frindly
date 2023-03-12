@@ -1,31 +1,49 @@
+
 <x-guest-layout>
+
     <div class="pt-4 bg-gray-100">
+
         <div class="min-h-screen flex flex-col items-center pt-6 sm:pt-0">
-            <div>
-                <x-jet-authentication-card-logo />
-            </div>
+
             <div class="w-full sm:max-w-2xl mt-6 p-6 bg-white shadow-md overflow-hidden sm:rounded-lg prose">
-                <form method="POST" action="{{ route('addTickets') }}">
+                <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
+                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                                         onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-dropdown-link>
+                </form>
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Well done!</h4>
+                        <p>{{ session('status') }}</p>
+                        <hr>
+                    </div>
+                @endif
+                <form method="POST" action="{{ route('addTickets') }}">
+                    @csrf
+                    <div class="mt-4">
+                        <x-jet-label for="password" value="{{ __('Имя фамилия продавца') }}"/>
+                        <x-jet-input id="password" class="block mt-1 w-full" type="text" name="seller" required autocomplete="Seller"/>
+                    </div>
                     <div>
-                        <x-jet-label for="name" value="{{ __('ФИО') }}" />
-                        <x-jet-input id="name" class="block mt-1 w-full" type="text" name="fio" :value="old('fio')" required autofocus autocomplete="fio" />
+                        <x-jet-label for="name" value="{{ __('Проект (или с кем договорился о френдли)') }}"/>
+                        <x-jet-input id="name" class="block mt-1 w-full" type="text" name="fio_seller" :value="old('fio')" required autofocus autocomplete="fio_seller"/>
+                    </div>
+                    <div class="mt-4">
+                        <x-jet-label for="email" value="{{ __('Email покупателя') }}"/>
+                        <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required/>
                     </div>
 
-                    <div class="mt-4">
-                        <x-jet-label for="email" value="{{ __('Email') }}" />
-                        <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-                    </div>
+
+
+
 
                     <div class="mt-4">
-                        <x-jet-label for="password" value="{{ __('Продовец') }}" />
-                        <x-jet-input id="password" class="block mt-1 w-full" type="text" name="seller" required autocomplete="Seller" />
-                    </div>
-
-                    <div class="mt-4">
-                        <x-jet-label for="password_confirmation" value="{{ __('Сколько билетов: (выбор чисел)') }}" />
-                        <select id="password_confirmation" class="block mt-1 w-full" name="count" required autocomplete="count">
+                        <x-jet-label for="password_confirmation" value="{{ __('Сколько билетов') }}"/>
+                        <select id="count_ticket" class="block mt-1 w-full" name="count" required autocomplete="count" onchange="showFio()">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -38,32 +56,43 @@
                             <option value="10">10</option>
                         </select>
                     </div>
+                    <div id="listFio">
+                        <div class="mt-4" id="cloneFio">
+                            <x-jet-label value="{{ __('Фамилия Имя покупателя:') }}"/>
+                            <x-jet-input class="block mt-1 w-full fio" type="text" name="fio[]" required/>
+                        </div>
+                    </div>
                     <div class="mt-4">
-                        <x-jet-label for="price" value="{{ __('Стоимость') }}" />
-                        <x-jet-input id="price" class="block mt-1 w-full" type="number" name="price" required autocomplete="price" />
+                        <x-jet-label for="price" value="{{ __('Сумма, полученная за билеты:') }}"/>
+                        <x-jet-input id="price" class="block mt-1 w-full" type="number" name="price" required autocomplete="price"/>
                     </div>
                     <div class="flex items-center justify-end mt-4">
                         <x-jet-button class="ml-4">
                             {{ __('Продать') }}
                         </x-jet-button>
                     </div>
-                    @if (session('status'))
-                        <div class="mb-4 font-medium text-sm text-green-600">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                </form>
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-jet-dropdown-link href="{{ route('logout') }}"
-                                         onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-jet-dropdown-link>
+{{--                    <div class="form-group">По техническим причинам отправка почты на GMAIL невозможна. Для уточнения своего id просим связаться с нами
+                        <a href="mailto:ticket@spaceofjoy.ru?subject=Узнать своё id">antikireev@gmail.com</a>.
+                        <bk/>
+                        Приносим свои извинения, Space of joy community
+                    </div>--}}
                 </form>
             </div>
         </div>
     </div>
 </x-guest-layout>
+<script>
+    function showFio() {
+        var listFio = $("#listFio");
+        var count = + document.getElementById('count_ticket').value;
+        $('.fio').val('');
+        var elem = $('#cloneFio');
+        elem.val("");
+        listFio.html('');
+        console.log(elem);
+        console.log(count);
+        for (let i = 0; i < count; i++) {
+            elem.clone().appendTo('#listFio')
+        }
+    }
+</script>

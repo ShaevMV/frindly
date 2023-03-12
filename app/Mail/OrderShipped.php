@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use http\Env;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -32,8 +33,9 @@ class OrderShipped extends Mailable
      */
     public function build(): OrderShipped
     {
-        return $this->from('noreply@no-reply.ru')
-            ->markdown('emails.orders.shipped')
-            ->with(['ids' => implode($this->ids)]);
+        return $this->from('fullmoon@pranatech.ru')
+        ->markdown('emails.orders.shipped')
+        ->subject('Билеты на Full Moon Systo Togathering 2022')
+            ->with(['ids' => $this->ids]);
     }
 }

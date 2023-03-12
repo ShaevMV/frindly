@@ -22,17 +22,24 @@ class TicketController extends Controller
         DB::beginTransaction();
         try {
             $ids = [];
-            for ($i = 0; $i < $request->post('count'); $i++) {
+            foreach ($request->post('fio') as $value) {
                 $model = new FriendlyTicket();
-                $model->fio = $request->post('fio');
+                $model->fio_friendly = $value;
+                $model->fio = $request->post('fio_seller');
                 $model->seller = $request->post('seller');
                 $model->email = $request->post('email');
                 $model->price = $price;
                 $model->saveOrFail();
-                $ids[] = 'f' . $model->id;
+                $ids['f' . $model->id] =  $value;
             }
+/*            mail(
+                $request->post('email'),
+                'Билеты на Full Moon Systo Togathering 2022',
+                view('emails.orders.shipped',['ids' => $ids])
+            );*/
 
             Mail::to($request->post('email'))->send(new OrderShipped($ids));
+            
             $massage = 'Билеты добавлены';
             DB::commit();
         } catch (Throwable $e) {

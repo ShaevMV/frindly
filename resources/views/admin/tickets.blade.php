@@ -7,8 +7,10 @@
                     <th>#</th>
                     <th>{{ __('Email') }}</th>
                     <th>{{ __('Имя') }}</th>
-                    <th>{{ __('Продовец') }}</th>
+                    <th>{{ __('Проект (или с кем договорился о френдли)') }}</th>
+                    <th>{{ __('ФИО покупателя') }}</th>
                     <th>{{ __('Стоимость') }}</th>
+                    <th>{{ __('Дата') }}</th>
                     <th>{{ __('Действие') }}</th>
                 </tr>
                 </thead>
@@ -19,7 +21,9 @@
                         <td>{{$ticket->email}}</td>
                         <td>{{$ticket->fio}}</td>
                         <td>{{$ticket->seller}}</td>
+                        <td>{{$ticket->fio_friendly}}</td>
                         <td>{{$ticket->price}}</td>
+                        <td>{{$ticket->created_at}}</td>
                         <td>
                             <form method="POST" action="{{ route('delTicket') }}">
                                 @csrf

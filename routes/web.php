@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return redirect('/');
 })->name('dashboard');
 
 
@@ -25,8 +25,8 @@ Route::get('/register', function () {
     return redirect('/');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', [TicketController::class, 'view'])->name('viewAddTickets');
-Route::middleware(['auth:sanctum', 'verified'])->post('/', [TicketController::class, 'add'])->name('addTickets');
+Route::middleware(['auth', 'verified'])->get('/', [TicketController::class, 'view'])->name('viewAddTickets');
+Route::middleware(['auth', 'verified'])->post('/', [TicketController::class, 'add'])->name('addTickets');
 
 
 Route::middleware(['admin', 'verified'])->get('/admin', [AdminController::class, 'view'])->name('adminView');

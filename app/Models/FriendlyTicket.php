@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $email
  * @property string $fio
  * @property string $seller
+ * @property string $fio_friendly
  * @property int $count
  * @property float $price
  *
@@ -26,5 +27,6 @@ class FriendlyTicket extends Model
         'fio',
         'seller',
         'price',
+        'fio_friendly'
     ];
 }

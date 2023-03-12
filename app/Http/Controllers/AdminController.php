@@ -15,9 +15,9 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    private CreateNewUser $createNewUser;
-    private UpdateUserProfileInformation $updateUserProfileInformation;
-    private UpdateUserPassword $updateUserPassword;
+    private $createNewUser;
+    private $updateUserProfileInformation;
+    private $updateUserPassword;
 
     public function __construct(
         CreateNewUser $createNewUser,
@@ -86,7 +86,9 @@ class AdminController extends Controller
 
     public function tickets()
     {
-        $tickets = FriendlyTicket::all();
+        $tickets = FriendlyTicket::where(
+            'id' , '>=' , 1000
+            )->get();
 
         return view('admin.tickets', [
             'tickets' => $tickets,
