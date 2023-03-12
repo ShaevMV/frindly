@@ -7,6 +7,7 @@
                     <th>#</th>
                     <th>{{ __('Email') }}</th>
                     <th>{{ __('Имя') }}</th>
+                    <th>{{ __('Проект') }}</th>
                     <th>{{ __('Действие') }}</th>
                 </tr>
                 </thead>
@@ -16,6 +17,7 @@
                         <td>{{$user->id}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->name}}</td>
+                        <td>{{$user->project}}</td>
                         <td>
                             <a href="{{ route('editUser',['id' => $user->id]) }}">{{ __('Edit') }}</a>
                             <form method="POST" action="{{ route('delUser') }}">

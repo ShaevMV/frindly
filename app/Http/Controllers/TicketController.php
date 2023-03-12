@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\OrderShipped;
 use App\Models\FriendlyTicket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Throwable;
@@ -13,7 +14,9 @@ class TicketController extends Controller
 {
     public function view()
     {
-        return view('tickets/form');
+        return view('tickets/form',[
+            'user'=> Auth::user(),
+        ]);
     }
 
     public function add(Request $request)
@@ -32,14 +35,9 @@ class TicketController extends Controller
                 $model->saveOrFail();
                 $ids['f' . $model->id] =  $value;
             }
-/*            mail(
-                $request->post('email'),
-                'Билеты на Full Moon Systo Togathering 2022',
-                view('emails.orders.shipped',['ids' => $ids])
-            );*/
 
-            Mail::to($request->post('email'))->send(new OrderShipped($ids));
-            
+            Mail::to($request->post('email'))->send(new OrderShipped($ids, $request->post('email')));
+
             $massage = 'Билеты добавлены';
             DB::commit();
         } catch (Throwable $e) {

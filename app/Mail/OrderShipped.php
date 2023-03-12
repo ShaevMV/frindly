@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Services\CreatingQrCodeService;
 use http\Env;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
@@ -15,15 +16,18 @@ class OrderShipped extends Mailable
      * @var int[]
      */
     public $ids;
+    private string $email;
 
     /**
      * Create a new message instance.
      *
      * @param int[] $ids
      */
-    public function __construct(array $ids)
+    public function __construct(array $ids, string $email)
     {
         $this->ids = $ids;
+        $this->email = $email;
+        $this->subject('Билеты на Solar Systo Togathering ' . date('Y'));
     }
 
     /**
@@ -31,11 +35,17 @@ class OrderShipped extends Mailable
      *
      * @return $this
      */
-    public function build(): OrderShipped
+    public function build(
+        CreatingQrCodeService $service
+    ): OrderShipped
     {
-        return $this->from('fullmoon@pranatech.ru')
-        ->markdown('emails.orders.shipped')
-        ->subject('Билеты на Full Moon Systo Togathering 2022')
-            ->with(['ids' => $this->ids]);
+        $mail = $this->from('ticket@solarsysto.ru')->view('emails.orders.orderToPaid');
+
+        foreach ($this->ids as $id => $name) {
+            $contents = $service->createPdf($id, $name, $this->email);
+            $mail->attachData($contents->output(), 'Билет ' . $name . '.pdf');
+        }
+
+        return $mail;
     }
 }
