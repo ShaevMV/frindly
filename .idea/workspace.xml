@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="Добавил проект и создание qrcoda">
-      <change afterPath="$PROJECT_DIR$/public/images/main-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/top-img.png" afterDir="false" />
+    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="Поправил отправку писем">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/OrderShipped.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/OrderShipped.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +40,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="api.ticket.loc" id="5caaf863-4517-4894-ade8-d6b1d6455ca3" name="api.ticket.loc" port="8083" use_path_mappings="true">
@@ -189,18 +184,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/shaevmv/Project/friendly.spaceofjoy (1).ru/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shaevmv/Project/friendly.spaceofjoy (1).ru/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -235,7 +230,9 @@
       <workItem from="1616827506249" duration="3803000" />
       <workItem from="1616840169024" duration="4511000" />
       <workItem from="1616908751881" duration="7250000" />
-      <workItem from="1678641429188" duration="4399000" />
+      <workItem from="1678641429188" duration="4944000" />
+      <workItem from="1678650607595" duration="177000" />
+      <workItem from="1678696330574" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="реализовал создания заказов + отправка писем">
       <created>1616842022067</created>
@@ -272,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678646570535</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Поправил отправку писем">
+      <created>1678648328096</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678648328096</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +299,8 @@
     <MESSAGE value="Создал админку для билетов" />
     <MESSAGE value="add" />
     <MESSAGE value="Добавил проект и создание qrcoda" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил проект и создание qrcoda" />
+    <MESSAGE value="Поправил отправку писем" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поправил отправку писем" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
