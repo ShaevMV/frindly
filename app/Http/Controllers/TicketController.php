@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\OrderShipped;
+use App\Jobs\ProcessSendTicketEmail;
 use App\Models\FriendlyTicket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Mail;
 use Throwable;
+use Illuminate\Support\Facades\Bus;
 
 class TicketController extends Controller
 {
@@ -36,7 +36,12 @@ class TicketController extends Controller
                 $ids['f' . $model->id] =  $value;
             }
 
-            Mail::to($request->post('email'))->send(new OrderShipped($ids, $request->post('email')));
+            Bus::chain([
+                new ProcessSendTicketEmail(
+                    $request->post('email'),
+                    $ids
+                ),
+            ])->dispatch();
 
             $massage = 'Билеты добавлены';
             DB::commit();
