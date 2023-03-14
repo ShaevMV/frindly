@@ -12,6 +12,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class AdminController extends Controller
 {
@@ -60,6 +61,9 @@ class AdminController extends Controller
         return view('auth.register');
     }
 
+    /**
+     * @throws ValidationException
+     */
     public function registerUser(Request $request): RedirectResponse
     {
         if ($id = $request->post('id', null)) {
