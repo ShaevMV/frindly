@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateFriendlyTicket extends Migration
@@ -21,6 +22,7 @@ class CreateFriendlyTicket extends Migration
             $table->float('price');
             $table->timestamps();
         });
+        DB::statement('alter table friendly_tickets AUTO_INCREMENT = 30000');
     }
 
     /**

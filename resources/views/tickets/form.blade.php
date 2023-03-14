@@ -12,12 +12,11 @@
                     <x-jet-dropdown-link href="{{ route('logout') }}"
                                          onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                        {{ __('Выйти из системы') }}
                     </x-jet-dropdown-link>
                 </form>
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
-                        <h4 class="alert-heading">Well done!</h4>
                         <p>{{ session('status') }}</p>
                         <hr>
                     </div>

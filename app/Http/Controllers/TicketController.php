@@ -43,7 +43,8 @@ class TicketController extends Controller
                 ),
             ])->dispatch();
 
-            $massage = 'Билеты добавлены';
+            $massage = 'Ура! Всё получилось!
+Билеты отправлены на указанную почту!';
             DB::commit();
         } catch (Throwable $e) {
             DB::rollback();
