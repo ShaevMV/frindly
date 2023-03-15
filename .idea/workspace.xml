@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="fix">
-      <change afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
+    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="final fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +187,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/shaevmv/Project/friendly.spaceofjoy (1).ru/public/images",
+    "last_opened_file_path": "/home/shaevmv/Project/friendly.spaceofjoy (1).ru/public/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -201,11 +198,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/resources/views/emails" />
       <recent name="$PROJECT_DIR$/resources/views/emails/orders" />
-      <recent name="$PROJECT_DIR$/resources/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/emails" />
@@ -238,7 +235,7 @@
       <workItem from="1678696330574" duration="6000" />
       <workItem from="1678708434797" duration="3304000" />
       <workItem from="1678787065515" duration="8339000" />
-      <workItem from="1678903855375" duration="653000" />
+      <workItem from="1678903855375" duration="1693000" />
     </task>
     <task id="LOCAL-00001" summary="реализовал создания заказов + отправка писем">
       <created>1616842022067</created>
@@ -331,7 +328,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678823329789</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="final fix">
+      <created>1678904558982</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678904558982</updated>
+    </task>
+    <task id="LOCAL-00015" summary="final fix">
+      <created>1678905060441</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678905060441</updated>
+    </task>
+    <task id="LOCAL-00016" summary="final fix">
+      <created>1678905386866</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678905386866</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +377,8 @@
     <MESSAGE value="fix project" />
     <MESSAGE value="add jobs" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="final fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="final fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -25,7 +25,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => 'SystoAdmin',
-            'email' => 'admin@admin.ru',
+            'email' => 'admin@spaceofjoy.ru',
             'email_verified_at' => now(),
             'password' => Hash::make('2457114moremore'),
             'remember_token' => Str::random(10),
