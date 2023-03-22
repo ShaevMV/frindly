@@ -12,6 +12,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
 class AdminController extends Controller
@@ -41,7 +42,9 @@ class AdminController extends Controller
 
     public function users()
     {
-        $users = User::where(['is_admin' => false])
+        $users = User::leftJoin('friendly_tickets', 'friendly_tickets.user_id', '=', 'users.id')
+            ->select(['users.*', DB::raw('SUM(friendly_tickets.price) AS sum_price')])
+            ->groupBy('users.id')
             ->get();
 
         return view('admin.users', [

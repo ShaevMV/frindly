@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Bus;
 
 class TicketController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function view()
     {
         return view('tickets/form',[
@@ -32,6 +37,7 @@ class TicketController extends Controller
                 $model->seller = $request->post('seller');
                 $model->email = $request->post('email');
                 $model->price = $price;
+                $model->user_id = Auth::id();
                 $model->saveOrFail();
                 $ids['f' . $model->id] =  $value;
             }
