@@ -12298,7 +12298,15 @@ select {
 }
 
 .table {
-  display: table;
+    width: 300px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+.table td, th {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+}
+.table th {
+    background: #b0e0e6; /* Цвет фона */
 }
 
 .table-caption {
