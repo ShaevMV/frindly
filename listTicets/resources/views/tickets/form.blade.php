@@ -52,11 +52,7 @@
                             {{ __('Продать') }}
                         </x-jet-button>
                     </div>
-{{--                    <div class="form-group">По техническим причинам отправка почты на GMAIL невозможна. Для уточнения своего id просим связаться с нами
-                        <a href="mailto:ticket@spaceofjoy.ru?subject=Узнать своё id">antikireev@gmail.com</a>.
-                        <bk/>
-                        Приносим свои извинения, Space of joy community
-                    </div>--}}
+
                 </form>
             </div>
         </div>
