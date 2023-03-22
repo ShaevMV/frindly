@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
-use App\Models\FriendlyTicket;
+use App\Models\ListTicket;
 use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
 class AdminController extends Controller
@@ -42,13 +41,8 @@ class AdminController extends Controller
 
     public function users()
     {
-        $users = User::leftJoin('friendly_tickets', 'friendly_tickets.user_id', '=', 'users.id')
-            ->select(['users.*',
-                DB::raw('SUM(friendly_tickets.price) AS sum_price'),
-                DB::raw('COUNT(friendly_tickets.id) AS count_tickets')
-            ])
-            ->groupBy('users.id')
-            ->get();
+        $users = User
+            ::get();
 
         return view('admin.users', [
             'users' => $users,
@@ -96,7 +90,7 @@ class AdminController extends Controller
 
     public function tickets()
     {
-        $tickets = FriendlyTicket::where(
+        $tickets = ListTicket::where(
             'id' , '>=' , 1000
             )->get();
 
@@ -109,7 +103,7 @@ class AdminController extends Controller
     {
         $id = $request->post('id');
 
-        FriendlyTicket::destroy($id);
+        ListTicket::destroy($id);
 
         return redirect()->route('adminTickets');
     }

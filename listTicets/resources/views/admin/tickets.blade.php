@@ -6,10 +6,9 @@
                 <tr>
                     <th>#</th>
                     <th>{{ __('Email') }}</th>
-                    <th>{{ __('Имя') }}</th>
-                    <th>{{ __('Проект (или с кем договорился о френдли)') }}</th>
-                    <th>{{ __('ФИО покупателя') }}</th>
-                    <th>{{ __('Стоимость') }}</th>
+                    <th>{{ __('Куратор') }}</th>
+                    <th>{{ __('Проект') }}</th>
+                    <th>{{ __('ФИО участника') }}</th>
                     <th>{{ __('Комментарий') }}</th>
                     <th>{{ __('Дата') }}</th>
                     <th>{{ __('Действие') }}</th>
@@ -18,12 +17,11 @@
                 <tbody>
                 @foreach ($tickets as $ticket)
                     <tr>
-                        <td>f{{$ticket->id}}</td>
+                        <td>S{{$ticket->id}}</td>
                         <td>{{$ticket->email}}</td>
+                        <td>{{$ticket->curator}}</td>
+                        <td>{{$ticket->project}}</td>
                         <td>{{$ticket->fio}}</td>
-                        <td>{{$ticket->seller}}</td>
-                        <td>{{$ticket->fio_friendly}}</td>
-                        <td>{{$ticket->price}}</td>
                         <td title="{{$ticket->comment}}">{{mb_substr($ticket->comment ?? '',0,10)}}</td>
                         <td>{{$ticket->created_at}}</td>
 

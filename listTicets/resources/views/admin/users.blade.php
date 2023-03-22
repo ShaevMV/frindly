@@ -7,10 +7,7 @@
                     <th>#</th>
                     <th>{{ __('Email') }}</th>
                     <th>{{ __('Имя') }}</th>
-                    <th>{{ __('Проект') }}</th>
-                    <th>{{ __('Сумма') }}</th>
-                    <th>{{ __('Кол-во') }}</th>
-                    <th>{{ __('Действие') }}</th>
+                    <th>{{ __('Куратор') }}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -19,9 +16,7 @@
                         <td>{{$user->id}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->name}}</td>
-                        <td>{{$user->project}}</td>
-                        <td>{{$user->sum_price ?? 0}}</td>
-                        <td>{{$user->count_tickets ?? 0}}</td>
+                        <td>{{$user->curator}}</td>
                         <td>
                             <a href="{{ route('editUser',['id' => $user->id]) }}">{{ __('Edit') }}</a>
                             <form method="POST" action="{{ route('delUser') }}">

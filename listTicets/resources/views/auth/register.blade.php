@@ -24,8 +24,8 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="project" value="{{ __('Проект') }}"/>
-                <x-jet-input id="project" class="block mt-1 w-full" type="text" name="project" value="{{$user->project ?? ''}}"
+                <x-jet-label for="project" value="{{ __('Куратор') }}"/>
+                <x-jet-input id="project" class="block mt-1 w-full" type="text" name="curator" value="{{$user->project ?? ''}}"
                              required/>
             </div>
 
