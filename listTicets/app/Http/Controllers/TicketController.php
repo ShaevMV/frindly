@@ -30,6 +30,9 @@ class TicketController extends Controller
         try {
             $ids = [];
             $nameList = explode("\r\n", $request->get("list"));
+            if(count($nameList)===0) {
+                throw new \Exception('Не указан состав');
+            }
             foreach ($nameList as $value) {
                 $model = new ListTicket();
                 $model->fio = $value;
