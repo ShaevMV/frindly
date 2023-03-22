@@ -56,6 +56,10 @@
                         <x-jet-label for="price" value="{{ __('Сумма, полученная за билеты:') }}"/>
                         <x-jet-input id="price" class="block mt-1 w-full" type="number" name="price" required autocomplete="price"/>
                     </div>
+                    <div class="mt-4">
+                        <x-jet-label for="comment" value="{{ __('Комментарий:') }}"/>
+                        <textarea class="block mt-1 w-full" name="comment" id="comment" rows="3"> </textarea>
+                    </div>
                     <div class="flex items-center justify-end mt-4">
                         <x-jet-button class="ml-4">
                             {{ __('Продать') }}

@@ -36,7 +36,9 @@ class TicketController extends Controller
                 $model->fio = $request->post('fio_seller');
                 $model->seller = $request->post('seller');
                 $model->email = $request->post('email');
+                $model->comment = $request->post('comment');
                 $model->price = $price;
+
                 $model->user_id = Auth::id();
                 $model->saveOrFail();
                 $ids['f' . $model->id] =  $value;

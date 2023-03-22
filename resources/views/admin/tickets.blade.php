@@ -10,6 +10,7 @@
                     <th>{{ __('Проект (или с кем договорился о френдли)') }}</th>
                     <th>{{ __('ФИО покупателя') }}</th>
                     <th>{{ __('Стоимость') }}</th>
+                    <th>{{ __('Комментарий') }}</th>
                     <th>{{ __('Дата') }}</th>
                     <th>{{ __('Действие') }}</th>
                 </tr>
@@ -23,7 +24,9 @@
                         <td>{{$ticket->seller}}</td>
                         <td>{{$ticket->fio_friendly}}</td>
                         <td>{{$ticket->price}}</td>
+                        <td title="{{$ticket->comment}}">{{mb_substr($ticket->comment ?? '',0,10)}}</td>
                         <td>{{$ticket->created_at}}</td>
+
                         <td>
                             <form method="POST" action="{{ route('delTicket') }}">
                                 @csrf
