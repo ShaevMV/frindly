@@ -43,7 +43,10 @@ class AdminController extends Controller
     public function users()
     {
         $users = User::leftJoin('friendly_tickets', 'friendly_tickets.user_id', '=', 'users.id')
-            ->select(['users.*', DB::raw('SUM(friendly_tickets.price) AS sum_price')])
+            ->select(['users.*',
+                DB::raw('SUM(friendly_tickets.price) AS sum_price'),
+                DB::raw('COUNT(friendly_tickets.id) AS count_tickets')
+            ])
             ->groupBy('users.id')
             ->get();
 
