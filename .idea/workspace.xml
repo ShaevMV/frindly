@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="добавил list">
-      <change afterPath="$PROJECT_DIR$/docker/worker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/worker/conf/supervisord.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/worker/vhost.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="добавил list" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -253,7 +247,7 @@
       <workItem from="1679382382686" duration="705000" />
       <workItem from="1679392122781" duration="1229000" />
       <workItem from="1679401331716" duration="9017000" />
-      <workItem from="1679488122114" duration="18568000" />
+      <workItem from="1679488122114" duration="18786000" />
     </task>
     <task id="LOCAL-00001" summary="реализовал создания заказов + отправка писем">
       <created>1616842022067</created>
@@ -430,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679510607702</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="добавил list">
+      <created>1679511110818</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1679511110818</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
