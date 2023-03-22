@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link href="/img/favicon.png" rel="apple-touch-icon">
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Оформить дружеский билет</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">

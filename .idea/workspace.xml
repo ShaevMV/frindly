@@ -4,22 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="добавил обвотку для таблицы">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="добавил list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/commandlinetools/Laravel_25_03_2021__20_41.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/dataSources/770695c1-7605-41c9-bec8-eab645d4dc4c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/friendly.spaceofjoy.ru.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/laravel-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/list/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/list/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/app/Http/Controllers/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/app/Http/Controllers/TicketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/app/Jobs/ProcessSendTicketEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/app/Jobs/ProcessSendTicketEmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/app/Mail/OrderShipped.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/app/Mail/OrderShipped.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/app/Models/FriendlyTicket.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/app/Models/ListTicket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/app/Services/CreatingQrCodeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/app/Services/CreatingQrCodeService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/database/migrations/2021_03_25_182026_create_friendly_ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/database/migrations/2021_03_25_182026_create_friendly_ticket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/database/migrations/2023_03_12_111722_add_project_in_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/database/migrations/2023_03_22_161816_add_curator_in_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/database/migrations/2023_03_13_125016_add_fio_friendly_in_friendly_tickets.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/database/migrations/2023_03_16_150206_add_in_user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/database/migrations/2023_03_22_130936_add_user_id_in_friendly_tickets.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/database/migrations/2023_03_22_130936_add_user_id_in_friendly_tickets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/database/migrations/2023_03_22_141339_add_comment_in_friendly_tickets.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/database/migrations/2023_03_22_141339_add_comment_in_friendly_tickets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/nginx/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/nginx/default.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/nginx/nginx.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/nginx/proxy_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/php/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/php/custom.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/php/start.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/php/www.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/docker/php/xdebug.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/resources/views/emails/orders/orderToPaid.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/resources/views/emails/orders/orderToPaid.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/resources/views/layouts/guest.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/resources/views/pdf.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/resources/views/pdf.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/resources/views/tickets/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/list/resources/views/tickets/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +281,7 @@
       <workItem from="1679382382686" duration="705000" />
       <workItem from="1679392122781" duration="1229000" />
       <workItem from="1679401331716" duration="9017000" />
-      <workItem from="1679488122114" duration="8929000" />
+      <workItem from="1679488122114" duration="17912000" />
     </task>
     <task id="LOCAL-00001" summary="реализовал создания заказов + отправка писем">
       <created>1616842022067</created>
@@ -412,7 +430,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679497296219</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="добавил list">
+      <created>1679500800407</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1679500800407</updated>
+    </task>
+    <task id="LOCAL-00023" summary="добавил list">
+      <created>1679500857975</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1679500857975</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +477,8 @@
     <MESSAGE value="add count tickets" />
     <MESSAGE value="add comment in tickets" />
     <MESSAGE value="добавил обвотку для таблицы" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил обвотку для таблицы" />
+    <MESSAGE value="добавил list" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,8 +2,9 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
              <img src="/images/logo.png" width="64" height="64"/>
-        </x-slot>
 
+        </x-slot>
+        <h1>ФРЕНДЛИ БИЛЕТЫ</h1>
         <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))
