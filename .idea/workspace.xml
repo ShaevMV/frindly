@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="fix text email">
+    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="fix email">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/packages.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listTicets/app/Http/Controllers/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Http/Controllers/TicketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listTicets/app/Jobs/ProcessSendTicketEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Jobs/ProcessSendListTicketEmail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listTicets/app/Mail/OrderShipped.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Mail/OrderShippedList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listTicets/resources/views/emails/orders/orderToPaid.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/resources/views/emails/orders/orderListToPaid.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listTicets/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listTicets/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Models/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +255,7 @@
       <workItem from="1679401331716" duration="9017000" />
       <workItem from="1679488122114" duration="22703000" />
       <workItem from="1679563061427" duration="1063000" />
-      <workItem from="1679577525931" duration="1685000" />
+      <workItem from="1679577525931" duration="1986000" />
     </task>
     <task id="LOCAL-00001" summary="реализовал создания заказов + отправка писем">
       <created>1616842022067</created>
@@ -492,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679563488993</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fix email">
+      <created>1679579319189</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1679579319189</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +532,8 @@
     <MESSAGE value="modified docker" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix text email" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix text email" />
+    <MESSAGE value="fix email" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix email" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
