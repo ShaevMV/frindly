@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\ProcessSendTicketEmail;
+use App\Jobs\ProcessSendListTicketEmail;
 use App\Models\ListTicket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,8 +19,8 @@ class TicketController extends Controller
 
     public function view()
     {
-        return view('tickets/form',[
-            'user'=> Auth::user(),
+        return view('tickets/form', [
+            'user' => Auth::user(),
         ]);
     }
 
@@ -30,7 +30,7 @@ class TicketController extends Controller
         try {
             $ids = [];
             $nameList = explode("\r\n", $request->get("list"));
-            if(count($nameList)===0) {
+            if (count($nameList) === 0) {
                 throw new \Exception('Не указан состав');
             }
             foreach ($nameList as $value) {
@@ -43,11 +43,11 @@ class TicketController extends Controller
 
                 $model->user_id = Auth::id();
                 $model->saveOrFail();
-                $ids['S' . $model->id] =  $value;
+                $ids['S' . $model->id] = $value;
             }
 
             Bus::chain([
-                new ProcessSendTicketEmail(
+                new ProcessSendListTicketEmail(
                     $request->post('email'),
                     $ids,
                     $request->post('project')

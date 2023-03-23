@@ -31,20 +31,19 @@
                     <td style="padding: 20px;">
                         <table style="border: none; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td style="padding-left: 20px; font-size: 30px; font-family: Tahoma, sans-serif;">Проходка на Solar Systo Togathering {{date('Y')}} подтверждён</td>
+                                <td style="padding-left: 20px; font-size: 30px; font-family: Tahoma, sans-serif;">Участие в Solar Systo Togathering {{date('Y')}} подтверждено</td>
                             </tr>
                         </table>
                     </td>
                 </tr>
                 <tr>
                     <td style="padding: 10px 20px 20px 20px; border-top: 1px solid #e6e6e6;  border-bottom: 1px solid #e6e6e6;">
-                        <p style="font-family: Tahoma, sans-serif; font-size: 18px;">В этом письме проходки на Solar Systo Togathering {{date('Y')}} потдверждён</p>
-                        <p style="font-family: Tahoma, sans-serif; font-size: 18px;">Билеты с qr-кодом на каждого гостя прикреплены к этому письму.</p>
+                        <p style="font-family: Tahoma, sans-serif; font-size: 18px;">Привет, дорогой друг. Бесплатные билеты с qr-кодом на каждого участника прикреплены к этому письму.</p>
                         <br/>
                         <p style="font-family: Tahoma, sans-serif; font-size: 18px;">Данные билеты НЕ ПОДЛЕЖАТ ОБМЕНУ И ПРОДАЖИ.</p>
 
                         <p style="font-family: Tahoma, sans-serif; font-size: 18px;">На входе на фестиваль каждому гостю необходимо будет показать свой qr-код на экране телефона или в распечатанном виде! Позаботься об этом заранее!</p>
-                        <p style="font-family: Tahoma, sans-serif; font-size: 18px;">До встречи, на фестивале!</p>
+                        <p style="font-family: Tahoma, sans-serif; font-size: 18px;">Прежняя система с ID и фамилией работать не будет. Без QR-кода Вас не пропустят! До встречи, на фестивале!</p> <br/>
                         <p style="font-family: Tahoma, sans-serif; font-size: 18px;">C любовью, команда организаторов Solar Systo Togathering</p>
                     </td>
                 </tr>

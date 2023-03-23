@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-use App\Mail\OrderShipped;
+use App\Mail\OrderShippedList;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -10,7 +10,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Mail;
 
-class ProcessSendTicketEmail implements ShouldQueue
+class ProcessSendListTicketEmail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -41,7 +41,7 @@ class ProcessSendTicketEmail implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to($this->email)->send(new OrderShipped(
+        Mail::to($this->email)->send(new OrderShippedList(
             $this->ids,
             $this->email,
             $this->project
