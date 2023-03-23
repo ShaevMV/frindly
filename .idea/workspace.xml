@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="fix admin">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listTicets/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listTicets/resources/views/tickets/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/resources/views/tickets/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tickets/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listTicets/app/Mail/OrderShipped.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Mail/OrderShipped.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listTicets/app/Services/CreatingQrCodeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Services/CreatingQrCodeService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listTicets/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listTicets/resources/views/emails/orders/orderToPaid.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/resources/views/emails/orders/orderToPaid.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,24 +190,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/shaevmv/Project/friendly.spaceofjoy (1).ru/docker",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shaevmv/Project/friendly.spaceofjoy (1).ru/docker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docker" />
@@ -256,6 +257,7 @@
       <workItem from="1679392122781" duration="1229000" />
       <workItem from="1679401331716" duration="9017000" />
       <workItem from="1679488122114" duration="22703000" />
+      <workItem from="1679563061427" duration="373000" />
     </task>
     <task id="LOCAL-00001" summary="реализовал создания заказов + отправка писем">
       <created>1616842022067</created>

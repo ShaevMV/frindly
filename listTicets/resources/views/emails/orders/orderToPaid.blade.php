@@ -31,15 +31,14 @@
                     <td style="padding: 20px;">
                         <table style="border: none; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
                             <tr>
-                                <td style="padding-left: 20px; font-size: 30px; font-family: Tahoma, sans-serif;">Оргвзнос на Solar Systo Togathering {{date('Y')}} подтверждён</td>
+                                <td style="padding-left: 20px; font-size: 30px; font-family: Tahoma, sans-serif;">Проходка на Solar Systo Togathering {{date('Y')}} подтверждён</td>
                             </tr>
                         </table>
                     </td>
                 </tr>
                 <tr>
                     <td style="padding: 10px 20px 20px 20px; border-top: 1px solid #e6e6e6;  border-bottom: 1px solid #e6e6e6;">
-                        <p style="text-align: center; font-family: Tahoma, sans-serif; font-size: 24px; font-weight: 500;">Привет, дорогой друг</p>
-                        <p style="font-family: Tahoma, sans-serif; font-size: 18px;">Твой оргвзнос на Solar Systo Togathering {{date('Y')}} потдверждён</p>
+                        <p style="font-family: Tahoma, sans-serif; font-size: 18px;">В этом письме проходки на Solar Systo Togathering {{date('Y')}} потдверждён</p>
                         <p style="font-family: Tahoma, sans-serif; font-size: 18px;">Билеты с qr-кодом на каждого гостя прикреплены к этому письму.</p>
                         <br/>
                         <p style="font-family: Tahoma, sans-serif; font-size: 18px;">Данные билеты НЕ ПОДЛЕЖАТ ОБМЕНУ И ПРОДАЖИ.</p>
