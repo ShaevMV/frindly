@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="fix email">
+    <list default="true" id="4dddaa8c-8e24-476d-b80f-e9de0a6d0090" name="Default Changelist" comment="fix reg user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listTicets/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listTicets/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listTicets/app/Mail/OrderShippedList.php" beforeDir="false" afterPath="$PROJECT_DIR$/listTicets/app/Mail/OrderShippedList.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +254,8 @@
       <workItem from="1679401331716" duration="9017000" />
       <workItem from="1679488122114" duration="22703000" />
       <workItem from="1679563061427" duration="1063000" />
-      <workItem from="1679577525931" duration="1986000" />
+      <workItem from="1679577525931" duration="4599000" />
+      <workItem from="1679641875157" duration="104000" />
     </task>
     <task id="LOCAL-00001" summary="реализовал создания заказов + отправка писем">
       <created>1616842022067</created>
@@ -495,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679579319189</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix reg user">
+      <created>1679579530588</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1679579530588</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +540,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="fix text email" />
     <MESSAGE value="fix email" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix email" />
+    <MESSAGE value="fix reg user" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix reg user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
