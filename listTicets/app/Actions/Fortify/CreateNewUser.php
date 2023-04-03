@@ -28,6 +28,7 @@ class CreateNewUser implements CreatesNewUsers
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
             'curator' => ['required', 'string', 'max:255'],
+            'is_admin' => ['boolean']
         ])->validate();
 
         return User::create([
@@ -35,6 +36,7 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
             'curator' => $input['curator'],
+            'is_admin' => $input['is_admin'],
         ]);
     }
 }

@@ -30,6 +30,13 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="project" value="{{ __('Админ') }}"/>
+                <input id="project" class="block mt-1 w-full" type="checkbox" name="is_admin" value="1"
+                    {{  ($user->is_admin == 1 ? ' checked' : '') }}
+                             />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" autocomplete="new-password" />
             </div>

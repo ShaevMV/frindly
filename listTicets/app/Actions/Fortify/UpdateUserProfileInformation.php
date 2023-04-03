@@ -24,8 +24,9 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
             'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],
-            'project' => ['required']
-        ])->validateWithBag('updateProfileInformation');
+            'curator' => ['required'],
+            'is_admin' => ['boolean']
+        ])->validate();
 
         if (isset($input['photo'])) {
             $user->updateProfilePhoto($input['photo']);
@@ -38,7 +39,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             $user->forceFill([
                 'name' => $input['name'],
                 'email' => $input['email'],
-                'project' => $input['project'],
+                'curator' => $input['curator'],
+                'is_admin' => $input['is_admin'] ?? 0,
             ])->save();
         }
     }
@@ -56,6 +58,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'name' => $input['name'],
             'email' => $input['email'],
             'email_verified_at' => null,
+            'is_admin' => $input['is_admin'],
         ])->save();
 
         $user->sendEmailVerificationNotification();

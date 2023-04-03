@@ -8,6 +8,7 @@
                     <th>{{ __('Email') }}</th>
                     <th>{{ __('Имя') }}</th>
                     <th>{{ __('Куратор') }}</th>
+                    <th>{{ __('Админ') }}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -17,6 +18,10 @@
                         <td>{{$user->email}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->curator}}</td>
+                        <td>@if($user->is_admin == 1)
+                                Admin
+                            @endif
+                        </td>
                         <td>
                             <a href="{{ route('editUser',['id' => $user->id]) }}">{{ __('Edit') }}</a>
                             <form method="POST" action="{{ route('delUser') }}">
